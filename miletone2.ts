@@ -108,7 +108,7 @@ let findSBStaff: GetVolunteer;
 //console.log(findSBStaff(userData));
 
 // Spread Operator
-var kyle: Volunteer = {
+let kyle: Volunteer = {
   name: "Kyle",
   age: 18,
   email: "kyle@email.com",
