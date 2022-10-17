@@ -1,5 +1,15 @@
 // This is the data we'll be working with!
-const userData = [
+
+interface Volunteer {
+  name: string;
+  age: number;
+  email: string;
+  position: "volunteer" | "staff";
+  city: string;
+  state: string;
+}
+
+const userData: Volunteer[] = [
   {
     name: "Joe",
     age: 30,
@@ -70,32 +80,35 @@ const userData = [
 /* Define a new lambda function that finds the average age of the users in the data. 
   Hint: user data is stored in the userData object above. 
 */
-//const findAverage =
+type GetVolunteer = (data: Volunteer[]) => Volunteer;
+let findAverage: GetVolunteer;
 
-//console.log(findAverage(data));
+//console.log(findAverage(userData));
 
 // Data Handling
 /* Use data handling function(s) to find the first index of someone from San Francisco (SF)
   Hint: Use a lambda function as a value
 */
-//var findIndexAns =
+type GetIndex = (data: Volunteer[]) => number;
+let findIndexAns: GetIndex;
 
 //console.log(findIndexAns);
 
 /* Use data handling function(s) to find all of the volunteers from California (CA) over an age threshold n
  */
-//var findCAOverN =
+type GetVolunteers = (data: Volunteer[]) => Volunteer[];
+let findCAOverN: GetVolunteers;
 
 //console.log(findCAOverN(userData, 25));
 
 /* Use data handling function(s) to find the first staff member from Santa Barbara (SB)
  */
-//var findSBStaff =
+let findSBStaff: GetVolunteer;
 
 //console.log(findSBStaff(userData));
 
 // Spread Operator
-var kyle = {
+var kyle: Volunteer = {
   name: "Kyle",
   age: 18,
   email: "kyle@email.com",
@@ -106,15 +119,15 @@ var kyle = {
 
 /* Lets make a clone of Kyle above using the spread operator and assign it to kyleClone
  */
-//var kyleClone =
+let kyleClone: Volunteer;
 
 //console.log(kyleClone);
 
 /* Next, lets use the spread operator to update your kyleClone object with the updatedLocation defined below and assign it to kyleNew
  */
-var updatedLocation = { city: "Seattle", state: "WA" };
+let updatedLocation = { city: "Seattle", state: "WA" };
 
-//var kyleNew =
+let kyleNew: Volunteer;
 
 //console.log(kyleNew);
 
