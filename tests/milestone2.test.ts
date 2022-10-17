@@ -8,7 +8,7 @@ import {
   findSBStaff,
   getVolunteerInfo,
   updateVolunteer,
-} from "../miletone2";
+} from "../milestone2";
 import { volunteers, volunteers2 } from "./data";
 import {
   q3allAges,

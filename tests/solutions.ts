@@ -1,4 +1,4 @@
-import { Volunteer } from "../miletone2";
+import { Volunteer } from "../milestone2";
 
 const q3allAges: Volunteer[] = [
   {
