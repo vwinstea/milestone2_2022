@@ -81,6 +81,7 @@ const userData: Volunteer[] = [
   Hint: user data is stored in the userData object above. 
 */
 type GetNumber = (data: Volunteer[]) => number;
+let findAverage: GetNumber;
 
 //console.log(findAverage(userData));
 
@@ -91,7 +92,7 @@ type GetNumber = (data: Volunteer[]) => number;
 type GetIndex = (data: Volunteer[]) => number;
 let findIndexAns: GetIndex;
 
-//console.log(findIndexAns);
+//console.log(findIndexAns(userData));
 
 /* Use data handling function(s) to find all of the volunteers from California (CA) over an age threshold n
  */
