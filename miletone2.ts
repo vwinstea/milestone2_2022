@@ -80,8 +80,7 @@ const userData: Volunteer[] = [
 /* Define a new lambda function that finds the average age of the users in the data. 
   Hint: user data is stored in the userData object above. 
 */
-type GetVolunteer = (data: Volunteer[]) => Volunteer;
-let findAverage: GetVolunteer;
+type GetNumber = (data: Volunteer[]) => number;
 
 //console.log(findAverage(userData));
 
@@ -103,6 +102,7 @@ let findCAOverN: GetVolunteers;
 
 /* Use data handling function(s) to find the first staff member from Santa Barbara (SB)
  */
+type GetVolunteer = (data: Volunteer[]) => Volunteer;
 let findSBStaff: GetVolunteer;
 
 //console.log(findSBStaff(userData));
