@@ -137,7 +137,7 @@ const q3allAges2: Volunteer[] = [
     age: 70,
     email: "Milton_Kiehn7@yahoo.com",
     position: "volunteer",
-    city: "SD",
+    city: "SB",
     state: "CA",
   },
 ];
