@@ -76,6 +76,8 @@ const userData: Volunteer[] = [
   },
 ];
 
+// Questions Start Here
+
 // Question 1: Lambda Functions
 /* Define a new lambda function that finds the average age of the users in the data. 
   Hint: user data is stored in the userData object above. 
