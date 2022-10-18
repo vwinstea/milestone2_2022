@@ -38,9 +38,9 @@ const userData: Volunteer[] = [
     name: "Julie",
     age: 34,
     email: "julie@email.com",
-    position: "staff",
-    city: "Seattle",
-    state: "WA",
+    position: "volunteer",
+    city: "SLO",
+    state: "CA",
   },
   {
     name: "Lucy",
@@ -76,38 +76,43 @@ const userData: Volunteer[] = [
   },
 ];
 
-// Lambda Functions
+// Questions Start Here
+
+// Question 1: Lambda Functions
 /* Define a new lambda function that finds the average age of the users in the data. 
   Hint: user data is stored in the userData object above. 
 */
-type GetVolunteer = (data: Volunteer[]) => Volunteer;
-let findAverage: GetVolunteer;
+type GetNumber = (data: Volunteer[]) => number;
+let findAverage: GetNumber; // Define lambda function here
 
 //console.log(findAverage(userData));
 
-// Data Handling
-/* Use data handling function(s) to find the first index of someone from San Francisco (SF)
+// Question 2: Data Handling
+/* Use data handling function(s) to find the first index of someone from San Francisco (SF).
+  Return -1 if no one is from San Francisco.
   Hint: Use a lambda function as a value
 */
-type GetIndex = (data: Volunteer[]) => number;
-let findIndexAns: GetIndex;
+let findIndexAns: GetNumber; // Code here
 
-//console.log(findIndexAns);
+//console.log(findIndexAns(userData));
 
+// Question 3: Filtering data
 /* Use data handling function(s) to find all of the volunteers from California (CA) over an age threshold n
  */
-type GetVolunteers = (data: Volunteer[]) => Volunteer[];
-let findCAOverN: GetVolunteers;
+type GetVolunteers = (data: Volunteer[], minAge: number) => Volunteer[];
+let findCAOverN: GetVolunteers; // Code here
 
 //console.log(findCAOverN(userData, 25));
 
+// Question 4: Searching Data
 /* Use data handling function(s) to find the first staff member from Santa Barbara (SB)
  */
-let findSBStaff: GetVolunteer;
+type GetVolunteer = (data: Volunteer[]) => Volunteer | undefined;
+let findSBStaff: GetVolunteer; // Code here
 
 //console.log(findSBStaff(userData));
 
-// Spread Operator
+// Question 5: Spread Operator Part 1
 let kyle: Volunteer = {
   name: "Kyle",
   age: 18,
@@ -119,27 +124,58 @@ let kyle: Volunteer = {
 
 /* Lets make a clone of Kyle above using the spread operator and assign it to kyleClone
  */
-let kyleClone: Volunteer;
+type CopyVolunteer = (vol: Volunteer) => Volunteer;
+let copyVolunteer: CopyVolunteer; // Code here
 
+// let kyleClone: Volunteer = copyVolunteer(kyle);
 //console.log(kyleClone);
 
+// Question 6: Spread Operator Part 2
 /* Next, lets use the spread operator to update your kyleClone object with the updatedLocation defined below and assign it to kyleNew
  */
 let updatedLocation = { city: "Seattle", state: "WA" };
-
 let kyleNew: Volunteer;
+type UpdateVolunteer = (
+  vol: Volunteer,
+  updates: Partial<Volunteer>
+) => Volunteer;
+let updateVolunteer: UpdateVolunteer; // Code here
 
+// let kyleNew = updateVolunteer(kyleClone);
 //console.log(kyleNew);
 
+// Question 7: Object Destructuring
 /* Now that we have our updated kyle, lets use object destructuring to get his name, age, and city
  */
-//Code here, no stub this time
 
-//console.log(name, age, city);
+type GetVolunteerInfo = (vol: Volunteer) => String;
+let getVolunteerInfo: GetVolunteerInfo = (vol) => {
+  let name, age, city; // Code here
+  return `${name} is ${age} years old and lives in ${city}`;
+};
 
-//Final Test:
-/* Use all the skills we've covered today to get the email address of the user from Santa Barbara (SB) over the age of 25
+// let kyleInfo = getVolunteerInfo(kyleNew);
+//console.log(kyleInfo);
+
+// Question 8: Putting it All Together!
+/* Use all the skills we've covered today to get the first user from 
+/* San Luis Obispo (SLO) over the age of 40, and return an updated
+/* version of them with their position set to staff. If no one meets
+/* these criteria, return undefined
  */
-//Code Here
 
-//console.log(email);
+let daBigTest: GetVolunteer; // Code here
+
+//console.log(daBigTest(userData));
+
+export {
+  Volunteer,
+  findAverage,
+  findIndexAns,
+  findCAOverN,
+  findSBStaff,
+  copyVolunteer,
+  updateVolunteer,
+  getVolunteerInfo,
+  daBigTest,
+};
