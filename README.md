@@ -40,7 +40,7 @@ There are two primary ways you can test your code: running the file and running 
 
 1. **Running the file** - We will be using ts-node to run our TypeScript file in the console. To use it, simply run `npx ts-node .\milestone2.ts`.
 
-2. **Running the tests** - We have written a suite of unit tests in [tests\milestone2.test.ts](tests\milestone2.test.ts) that evaluate all 8 questions. Once you pass all of the tests, you're done with this milestone! To run a single test run `npm test -t "Question <number>"` (e.g. `npm test -t "Question 2"`). To run all tests, run `npm test`.
+2. **Running the tests** - We have written a suite of unit tests in [tests\milestone2.test.ts](tests\milestone2.test.ts) that evaluate all 8 questions. Once you pass all of the tests, you're done with this milestone! To run a single test run `npm test -- -t="Question <number>"` (e.g. `npm test -- -t="Question 2"`). To run all tests, run `npm test`.
 
 ## Submitting your code
 
