@@ -64,7 +64,7 @@ test("Question 7: Object Destructuring", () => {
   const volunteer = volunteers[0];
   const volunteer2 = volunteers2[0];
   expect(getVolunteerInfo(volunteer)).toEqual(
-    "Dino is 17 years old and lives in SLO"
+    "Dino is 27 years old and lives in SLO"
   );
   expect(getVolunteerInfo(volunteer2)).toEqual(
     "Ali is 15 years old and lives in Denver"
